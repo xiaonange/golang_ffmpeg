@@ -1,3 +1,3 @@
-module go_ffmpeg
+module golang_ffmpeg
 
 go 1.15
