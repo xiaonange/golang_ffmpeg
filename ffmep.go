@@ -1,4 +1,4 @@
-package ffmpeg_go
+package golang_ffmpeg
 const (
  TYPE_STREAMS = "streams"
  TYPE_FORMAT = "format"

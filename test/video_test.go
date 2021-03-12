@@ -1,11 +1,11 @@
 package test
 
 import (
-	ffmpeg_go "github.com/xiaonange/go_ffmpeg"
+	 "github.com/xiaonange/golang_ffmpeg"
 	"testing"
 )
 
 func TestGetInfo(t *testing.T) {
-	Config := ffmpeg_go.Config{}
-	new(ffmpeg_go.Video).Create(Config).Info("/mnt/d/video/oceans.mp4")
+	Config := golang_ffmpeg.Config{}
+	new(golang_ffmpeg.Video).Create(Config).Info("/mnt/d/video/oceans.mp4")
 }

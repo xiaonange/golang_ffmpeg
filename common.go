@@ -1,2 +1,2 @@
-package ffmpeg_go
+package golang_ffmpeg
 
