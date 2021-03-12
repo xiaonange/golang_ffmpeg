@@ -34,7 +34,7 @@ func (v *Video) Open() *Video {
 }
 
 //获取video信息
-func (v *Video)Info(VideoPath string) {
+func (v *Video)Info(CommandName,VideoPath string) {
 	if VideoPath == ""{
 		panic("VideoPath can't null")
 	}
@@ -42,7 +42,7 @@ func (v *Video)Info(VideoPath string) {
 		v.Params = GetInfoParams()
 	}
 	v.Params = append(v.Params,VideoPath)
-	_,_,_ = Run("/usr/bin/ffmpeg",v.Params)
+	_,_,_ = Run(CommandName,v.Params)
 }
 
 //合并video

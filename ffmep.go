@@ -6,7 +6,6 @@ const (
 )
 
 type Config struct {
-	CommandPath map[string]string `json:"command_path"`
 	TimeOut int    `json:"time_out"`
 }
 

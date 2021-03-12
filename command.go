@@ -9,9 +9,19 @@ import (
 	"strings"
 )
 
-func  Run(commandName string, params []string) (bool, error, *os.Process) {
+func Run(commandName string, params []string)  {
 	cmd := exec.Command(commandName, params...)
+	fmt.Println(cmd.Args)
+	buf, err := cmd.Output()
+	if err != nil{
+		fmt.Println(err.Error())
+	}
+	fmt.Println(string(buf))
 
+}
+
+func  RunPipeline(commandName string, params []string) (bool, error, *os.Process) {
+	cmd := exec.Command(commandName, params...)
 	//显示运行的命令
 	fmt.Println(cmd.Args)
 	stdout, err := cmd.StdoutPipe()

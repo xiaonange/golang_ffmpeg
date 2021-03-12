@@ -6,6 +6,7 @@ import (
 )
 
 func TestGetInfo(t *testing.T) {
-	Config := golang_ffmpeg.Config{}
-	new(golang_ffmpeg.Video).Create(Config).Info("/mnt/d/video/oceans.mp4")
+	CommandPath := "/usr/bin/ffprobe"
+	Config := golang_ffmpeg.Config{TimeOut:10}
+	new(golang_ffmpeg.Video).Create(Config).Info(CommandPath,"/mnt/d/video/oceans.mp4")
 }
