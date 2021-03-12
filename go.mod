@@ -1,3 +1,3 @@
-module github.com/xiaonange/go_ffmpeg
+module go_ffmpeg
 
 go 1.15
