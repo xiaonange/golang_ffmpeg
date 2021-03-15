@@ -1,7 +1,7 @@
 package test
 
 import (
-	 "github.com/xiaonange/golang_ffmpeg"
+	 "video/golang_ffmpeg"
 	"testing"
 )
 

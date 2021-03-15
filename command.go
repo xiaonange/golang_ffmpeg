@@ -9,14 +9,14 @@ import (
 	"strings"
 )
 
-func Run(commandName string, params []string)  {
+func Run(commandName string, params []string)(error,string) {
 	cmd := exec.Command(commandName, params...)
 	fmt.Println(cmd.Args)
 	buf, err := cmd.Output()
-	if err != nil{
-		fmt.Println(err.Error())
+	if err != nil {
+		return err, ""
 	}
-	fmt.Println(string(buf))
+	return nil, string(buf)
 
 }
 
